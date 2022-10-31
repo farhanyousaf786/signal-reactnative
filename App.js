@@ -6,11 +6,20 @@ import LoginScreen from './Screens/LoginScreen';
 
 const Stack = createNativeStackNavigator();
 
+const globalScreenOptions = {
+
+
+  headerStyle: {backgroundColor: 'grey'},
+  headerTitleStyle: {color: "white"},
+  headerTitleStyle: "white"
+
+}
+
 export default function App() {
   return (
 
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={globalScreenOptions}>
       <Stack.Screen name="login" component={LoginScreen}/>
 
       </Stack.Navigator>
