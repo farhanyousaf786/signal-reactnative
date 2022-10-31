@@ -1,18 +1,19 @@
-
-
 import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import LoginScreen from './Screens/LoginScreen';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
 
     <NavigationContainer>
-     <View style={styles.container}>
-      <Text>We are building signal app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <Stack.Navigator>
+      <Stack.Screen name="login" component={LoginScreen}/>
 
+      </Stack.Navigator>
     </NavigationContainer>
     
   );

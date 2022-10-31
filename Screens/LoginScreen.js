@@ -4,7 +4,7 @@
  const LoginScreen = () => {
    return (
      <View>
-       <Text>LoginScreen</Text>
+       <Text>I am login screen</Text>
      </View>
    )
  }
