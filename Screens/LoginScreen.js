@@ -1,22 +1,40 @@
- import { View, Text, Image } from 'react-native'
- import React from 'react'
- import { StatusBar } from 'expo-status-bar';
+import React from "react";
+import { SafeAreaView, StyleSheet, TextInput, Image } from "react-native";
 
- 
- const LoginScreen = () => {
-   return (
-     <View>
-        <StatusBar style='light'/>
-        <Image source={{
-        
+
+
+const LoginScreen = () => {
+
+  return (
+    <SafeAreaView>
+
+
+      <Image source={{
         uri: "https://imgur.com/XQc4p22.png"
+      }}
+      style={{height: 200, width: 200}}/>
 
-       }}
-       
-       style={{width: 200, height: 200}}/>
-       
-     </View>
-   )
- }
- 
- export default LoginScreen
+      <TextInput
+        style={styles.input}
+        placeholder="Email"
+        keyboardType="text"
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Password"
+        keyboardType="text"
+      />
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  },
+});
+
+export default LoginScreen;
