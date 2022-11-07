@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SafeAreaView, StyleSheet, TextInput, Image } from "react-native";
+import { SafeAreaView, StyleSheet, TextInput, Image, Button } from "react-native";
 
 
 
@@ -13,13 +13,15 @@ const LoginScreen = () => {
   
 
   return (
-    <SafeAreaView>
+   
 
+    <SafeAreaView>
 
       <Image source={{
         uri: "https://imgur.com/XQc4p22.png"
       }}
       style={{height: 200, width: 200}}/>
+
 
       <TextInput
         style={styles.input}
@@ -38,9 +40,14 @@ const LoginScreen = () => {
         secureTextEntry
         value={password}
         onChangeText ={(tetx)=> setPass(tetx)}
-
       />
+
+       <Button containerStyle={styles.button} title="Login"/>
+       <Button containerStyle={styles.button} title="Register"/>
+
+
     </SafeAreaView>
+  
   );
 };
 
@@ -51,6 +58,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
   },
+  
+  button:{}
+
 });
 
 export default LoginScreen;
