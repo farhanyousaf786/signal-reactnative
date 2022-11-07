@@ -18,11 +18,15 @@ const LoginScreen = () => {
         style={styles.input}
         placeholder="Email"
         keyboardType="text"
+        autoFocus
+        type='email'
       />
       <TextInput
         style={styles.input}
         placeholder="Password"
         keyboardType="text"
+        type='password'
+        secureTextEntry
       />
     </SafeAreaView>
   );
