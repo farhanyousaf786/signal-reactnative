@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { SafeAreaView, StyleSheet, TextInput, Image } from "react-native";
 
 
 
 const LoginScreen = () => {
+
+
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
+
+
+  
 
   return (
     <SafeAreaView>
