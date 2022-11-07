@@ -17,7 +17,7 @@ const LoginScreen = () => {
   return (
    
 
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
 
       <Image source={{
         uri: "https://imgur.com/XQc4p22.png"
@@ -54,9 +54,14 @@ const LoginScreen = () => {
 };
 
 const styles = StyleSheet.create({
+
+  container:{
+
+  },
+
   input: {
     height: 40,
-    margin: 12,
+    margin:  12,
     borderWidth: 1,
     padding: 10,
   },
