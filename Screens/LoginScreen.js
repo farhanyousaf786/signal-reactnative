@@ -7,7 +7,7 @@ const LoginScreen = () => {
 
 
   const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
+  const [password, setPass] = useState("");
 
 
   
@@ -27,6 +27,8 @@ const LoginScreen = () => {
         keyboardType="text"
         autoFocus
         type='email'
+        value={email}
+        onChangeText ={(tetx)=> setEmail(tetx)}
       />
       <TextInput
         style={styles.input}
@@ -34,6 +36,9 @@ const LoginScreen = () => {
         keyboardType="text"
         type='password'
         secureTextEntry
+        value={password}
+        onChangeText ={(tetx)=> setPass(tetx)}
+
       />
     </SafeAreaView>
   );
