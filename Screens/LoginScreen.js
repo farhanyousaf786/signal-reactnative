@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SafeAreaView, StyleSheet, TextInput, Image, Button } from "react-native";
+import { SafeAreaView, StyleSheet, TextInput, Image, Button, KeyboardAvoidingView} from "react-native";
 
 
 
@@ -17,7 +17,7 @@ const LoginScreen = () => {
   return (
    
 
-    <SafeAreaView style={styles.container}>
+    <KeyboardAvoidingView behavior="padding" style={styles.container}>
 
       <Image source={{
         uri: "https://imgur.com/XQc4p22.png"
@@ -48,7 +48,7 @@ const LoginScreen = () => {
        <Button containerStyle={styles.button} title="Register" type="outline" onPress={register}/>
 
 
-    </SafeAreaView>
+    </KeyboardAvoidingView>
   
   );
 };
@@ -59,7 +59,10 @@ const styles = StyleSheet.create({
 
     flex: 1,
     alignItems: "center",
-    
+    justifyContent: "center",
+    padding: 10,
+
+
 
   },
 
