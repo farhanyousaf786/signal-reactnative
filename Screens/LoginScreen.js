@@ -9,6 +9,8 @@ const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPass] = useState("");
 
+  const signIn=()=>{}
+  const register=()=>{}
 
   
 
@@ -42,8 +44,8 @@ const LoginScreen = () => {
         onChangeText ={(tetx)=> setPass(tetx)}
       />
 
-       <Button containerStyle={styles.button} title="Login"/>
-       <Button containerStyle={styles.button} title="Register"/>
+       <Button containerStyle={styles.button} title="Login" onPress={signIn}/>
+       <Button containerStyle={styles.button} title="Register" type="outline" onPress={register}/>
 
 
     </SafeAreaView>
@@ -58,7 +60,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
   },
-  
+
   button:{}
 
 });
