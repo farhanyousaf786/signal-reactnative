@@ -1,11 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View,  KeyboardAvoidingView} from 'react-native'
 import React from 'react'
 
 export default function RegisterScreen({navigation}) {
   return (
-    <View>
-      <Text>I am REg</Text>
-    </View>
+    <KeyboardAvoidingView behavior="padding" style={styles.container}>
+
+   <Text h3 style={{marginBottom: 50}}>
+        Register Here!
+    </Text>
+
+
+    </KeyboardAvoidingView>
   )
 }
 
