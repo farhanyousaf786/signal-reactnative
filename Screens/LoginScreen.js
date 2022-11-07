@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet, TextInput, Image, Button, KeyboardAvoidingVie
 
 
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
 
 
   const [email, setEmail] = useState("");
@@ -46,7 +46,7 @@ const LoginScreen = () => {
       />
 
        <Button containerStyle={styles.button} title="Login" onPress={signIn}/>
-       <Button containerStyle={styles.button} title="Register" type="outline" onPress={register}/>
+       <Button containerStyle={styles.button} title="Register" type="outline" onPress={()=> navigation.navigate("Register")}/>
 
 
     </KeyboardAvoidingView>
