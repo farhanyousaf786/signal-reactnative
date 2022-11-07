@@ -22,7 +22,8 @@ const LoginScreen = () => {
       <Image source={{
         uri: "https://imgur.com/XQc4p22.png"
       }}
-      style={{height: 200, width: 200}}/>
+      style={{height: 200, width: 200, marginBottom: 50
+      }}/>
 
 
       <TextInput
@@ -71,9 +72,12 @@ const styles = StyleSheet.create({
     margin:  12,
     borderWidth: 1,
     padding: 10,
+    width: 300,
   },
 
-  button:{}
+  button:{
+  
+  }
 
 });
 
