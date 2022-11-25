@@ -2,6 +2,7 @@ import { StyleSheet, View, KeyboardAvoidingView, Button, TextInput } from 'react
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Text } from 'react-native-elements'
+import { withTheme } from '@rneui/themed';
 
 export default function RegisterScreen({ navigation }) {
 
@@ -18,7 +19,7 @@ export default function RegisterScreen({ navigation }) {
   return (
     <KeyboardAvoidingView behavior="padding" style={styles.container}>
 
-      <Text  h3 style={{ marginBottom: 20, marginTop: 20, }}>
+      <Text  h4 style={{ marginBottom: 20, marginTop: 20, }}>
         Create Account here
       </Text>
 
@@ -54,7 +55,8 @@ export default function RegisterScreen({ navigation }) {
         onPress={register}
         style={styles.inputContainer}>
         </Button>
-
+        
+        <View style={{height: 150}}></View>
       </View>
 
     </KeyboardAvoidingView>
@@ -65,12 +67,21 @@ const styles = StyleSheet.create({
 
   container: { 
 
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 10,
+    backgroundColor: 'white',
+
+
 
   },
 
   inputContainer: {
 
-    padding: 20
+    padding: 10,
+
+    
 
 
   }
