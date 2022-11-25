@@ -1,7 +1,7 @@
-import { StyleSheet, View, KeyboardAvoidingView, TextInput } from 'react-native'
+import { StyleSheet, View, KeyboardAvoidingView } from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Text, Button,} from 'react-native-elements'
+import { Text, Button, Input} from 'react-native-elements'
 import { withTheme } from '@rneui/themed';
 
 export default function RegisterScreen({ navigation }) {
@@ -11,6 +11,8 @@ export default function RegisterScreen({ navigation }) {
   const [password, setPassword] = useState('');
   const [ImageUrl, setImageUrl] = useState('');
   const register =()=>{
+
+
   }
 
 
@@ -30,32 +32,34 @@ export default function RegisterScreen({ navigation }) {
         Create Account here
       </Text>
 
-      <View >
+      <View  style={styles.inputContainer}>
 
-        <TextInput placeholder='Full Name'
+        <Input 
+          placeholder='Full Name'
+          autoFocus
           keyboardType='text'
           value={name}
           onChangeText={(text) => setName(text)}
-          style={styles.inputContainer} ></TextInput>
+           ></Input>
 
-        <TextInput placeholder='Email'
+        <Input placeholder='Email'
          keyboardType='email'
           value={email}
           onChangeText={(text) => setEmail(text)} 
-          style={styles.inputContainer}></TextInput>
+          ></Input>
 
-        <TextInput placeholder='Password'
+        <Input placeholder='Password'
           keyboardType='password'
           value={password}
           onChangeText={(text) => setPassword(text)} 
-          style={styles.inputContainer}></TextInput>
+          ></Input>
 
-        <TextInput placeholder='Here will be img url (optional)'
+        <Input placeholder='Here will be img url (optional)'
           keyboardType='text'
           value={ImageUrl}
           onChangeText={(text) => setImageUrl(text)}
           onSubmitEditing={register} 
-          style={styles.inputContainer}></TextInput>
+         ></Input>
 
 
         <Button title='Register'
@@ -87,9 +91,9 @@ const styles = StyleSheet.create({
   inputContainer: {
 
     padding: 10,
+    width: 300,
 
     
-
 
   }
 })
