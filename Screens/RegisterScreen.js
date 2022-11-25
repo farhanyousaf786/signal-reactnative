@@ -1,6 +1,7 @@
-import { StyleSheet, Text, View, KeyboardAvoidingView, Button, TextInput } from 'react-native'
+import { StyleSheet, View, KeyboardAvoidingView, Button, TextInput } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { Text } from 'react-native-elements'
 
 export default function RegisterScreen({ navigation }) {
 
@@ -62,7 +63,7 @@ export default function RegisterScreen({ navigation }) {
 
 const styles = StyleSheet.create({
 
-  container: {
+  container: { 
 
 
   },
