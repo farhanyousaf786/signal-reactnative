@@ -8,6 +8,10 @@ export default function RegisterScreen({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [ImageUrl, setImageUrl] = useState('');
+  const register =()=>{
+
+
+  }
 
 
   return (
@@ -18,7 +22,6 @@ export default function RegisterScreen({ navigation }) {
       </Text>
 
       <View style={styles.inputContainer}>
-
 
         <TextInput placeholder='Full Name'
           keyboardType='text'
@@ -38,7 +41,8 @@ export default function RegisterScreen({ navigation }) {
         <TextInput placeholder='Here will be img url (optional)'
           keyboardType='text'
           value={ImageUrl}
-          onChangeText={(text) => setName(text)} ></TextInput>
+          onChangeText={(text) => setName(text)}
+          onSubmitEditing={register} ></TextInput>
 
       </View>
 
@@ -49,6 +53,12 @@ export default function RegisterScreen({ navigation }) {
 const styles = StyleSheet.create({
 
   container: {
+
+
+  },
+
+  inputContainer: {
+
 
 
   }
