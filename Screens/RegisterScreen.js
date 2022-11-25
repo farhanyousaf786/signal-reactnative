@@ -1,14 +1,27 @@
-import { StyleSheet, Text, View,  KeyboardAvoidingView} from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, KeyboardAvoidingView, Button, TextInput } from 'react-native'
+import React, { useState } from 'react'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
-export default function RegisterScreen({navigation}) {
+export default function RegisterScreen({ navigation }) {
+
+  const [name, setName] = useState('');
+
   return (
     <KeyboardAvoidingView behavior="padding" style={styles.container}>
 
-   <Text h3 style={{marginBottom: 50}}>
-        Register Here!
-    </Text>
+      <Text h3 style={{ marginBottom: 50 }}>
+        Create Account here
+      </Text>
 
+      <View style={styles.inputContainer}>
+
+
+        <TextInput placeholder='Full Name'
+          autoFocus keyboardType='text'
+          value={name}
+          onChangeText={(text) => setName(text)} ></TextInput>
+
+      </View>
 
     </KeyboardAvoidingView>
   )
@@ -16,8 +29,8 @@ export default function RegisterScreen({navigation}) {
 
 const styles = StyleSheet.create({
 
-    container:{
+  container: {
 
-        
-    }
+
+  }
 })
