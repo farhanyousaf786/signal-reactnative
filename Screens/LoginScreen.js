@@ -9,8 +9,16 @@ const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState("");
   const [password, setPass] = useState("");
 
-  const signIn=()=>{}
-  const register=()=>{}
+  const signIn=()=>{
+
+    
+
+  }
+  const register=()=>{
+
+    navigation.navigate("Register");
+
+  }
 
   
 
@@ -46,7 +54,7 @@ const LoginScreen = ({navigation}) => {
       />
 
        <Button containerStyle={styles.button} title="Login" onPress={signIn}/>
-       <Button containerStyle={styles.button} title="Register" type="outline" onPress={()=> navigation.navigate("Register")}/>
+       <Button containerStyle={styles.button} title="Register" type="outline" onPress={register}/>
 
 
     </KeyboardAvoidingView>

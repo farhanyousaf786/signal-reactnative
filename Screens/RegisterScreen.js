@@ -14,4 +14,10 @@ export default function RegisterScreen({navigation}) {
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+
+    container:{
+
+        
+    }
+})
