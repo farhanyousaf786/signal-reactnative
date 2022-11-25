@@ -48,6 +48,12 @@ export default function RegisterScreen({ navigation }) {
           onSubmitEditing={register} 
           style={styles.inputContainer}></TextInput>
 
+
+        <Button title='Register'
+        onPress={register}
+        style={styles.inputContainer}>
+        </Button>
+
       </View>
 
     </KeyboardAvoidingView>
@@ -63,7 +69,7 @@ const styles = StyleSheet.create({
 
   inputContainer: {
 
-    padding: 10
+    padding: 20
 
 
   }
