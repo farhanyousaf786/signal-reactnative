@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { StyleSheet, TextInput, Image, Button, KeyboardAvoidingView } from "react-native";
+import { StyleSheet, TextInput, Image, KeyboardAvoidingView } from "react-native";
 
+import { Button } from 'react-native-elements'
 
 
 const LoginScreen = ({ navigation }) => {
@@ -87,6 +88,10 @@ const styles = StyleSheet.create({
   },
 
   button: {
+   
+     padding: 10,
+     width: 200,
+
 
 
   }

@@ -1,7 +1,7 @@
-import { StyleSheet, View, KeyboardAvoidingView, Button, TextInput } from 'react-native'
-import React, { useState } from 'react'
+import { StyleSheet, View, KeyboardAvoidingView, TextInput } from 'react-native'
+import React, { useLayoutEffect, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Text } from 'react-native-elements'
+import { Text, Button,} from 'react-native-elements'
 import { withTheme } from '@rneui/themed';
 
 export default function RegisterScreen({ navigation }) {
@@ -11,10 +11,17 @@ export default function RegisterScreen({ navigation }) {
   const [password, setPassword] = useState('');
   const [ImageUrl, setImageUrl] = useState('');
   const register =()=>{
-
-
   }
 
+
+  useLayoutEffect(()=>{
+
+    navigation.setOptions({
+    
+      headerBackTitle:"Back to Reg.",
+       
+    }[navigation])
+   })
 
   return (
     <KeyboardAvoidingView behavior="padding" style={styles.container}>
