@@ -17,32 +17,36 @@ export default function RegisterScreen({ navigation }) {
   return (
     <KeyboardAvoidingView behavior="padding" style={styles.container}>
 
-      <Text h3 style={{ marginBottom: 50 }}>
+      <Text  h3 style={{ marginBottom: 20, marginTop: 20, }}>
         Create Account here
       </Text>
 
-      <View style={styles.inputContainer}>
+      <View >
 
         <TextInput placeholder='Full Name'
           keyboardType='text'
           value={name}
-          onChangeText={(text) => setName(text)} ></TextInput>
+          onChangeText={(text) => setName(text)}
+          style={styles.inputContainer} ></TextInput>
 
         <TextInput placeholder='Email'
          keyboardType='email'
           value={email}
-          onChangeText={(text) => setName(text)} ></TextInput>
+          onChangeText={(text) => setEmail(text)} 
+          style={styles.inputContainer}></TextInput>
 
         <TextInput placeholder='Password'
           keyboardType='password'
           value={password}
-          onChangeText={(text) => setName(text)} ></TextInput>
+          onChangeText={(text) => setPassword(text)} 
+          style={styles.inputContainer}></TextInput>
 
         <TextInput placeholder='Here will be img url (optional)'
           keyboardType='text'
           value={ImageUrl}
-          onChangeText={(text) => setName(text)}
-          onSubmitEditing={register} ></TextInput>
+          onChangeText={(text) => setImageUrl(text)}
+          onSubmitEditing={register} 
+          style={styles.inputContainer}></TextInput>
 
       </View>
 
@@ -59,6 +63,7 @@ const styles = StyleSheet.create({
 
   inputContainer: {
 
+    padding: 10
 
 
   }
