@@ -5,6 +5,10 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 export default function RegisterScreen({ navigation }) {
 
   const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [ImageUrl, setImageUrl] = useState('');
+
 
   return (
     <KeyboardAvoidingView behavior="padding" style={styles.container}>
@@ -17,8 +21,23 @@ export default function RegisterScreen({ navigation }) {
 
 
         <TextInput placeholder='Full Name'
-          autoFocus keyboardType='text'
+          keyboardType='text'
           value={name}
+          onChangeText={(text) => setName(text)} ></TextInput>
+
+        <TextInput placeholder='Email'
+         keyboardType='email'
+          value={email}
+          onChangeText={(text) => setName(text)} ></TextInput>
+
+        <TextInput placeholder='Password'
+          keyboardType='password'
+          value={password}
+          onChangeText={(text) => setName(text)} ></TextInput>
+
+        <TextInput placeholder='Here will be img url (optional)'
+          keyboardType='text'
+          value={ImageUrl}
           onChangeText={(text) => setName(text)} ></TextInput>
 
       </View>
